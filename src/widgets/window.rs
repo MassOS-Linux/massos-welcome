@@ -48,8 +48,8 @@ impl Window {
         self.paginator.borrow_mut().add_page(
             ImagePageWidget::new(
                 "/org/gnome/Tour/overview.svg",
-                gettext("Get an Overview"),
-                gettext("Press the Super key to see open windows and apps."),
+                gettext("See Your Apps"),
+                gettext("Your apps are neatly categorised. You can also search for apps."),
             )
             .widget
             .upcast::<gtk::Widget>(),
@@ -59,7 +59,7 @@ impl Window {
             ImagePageWidget::new(
                 "/org/gnome/Tour/search.svg",
                 gettext("Just Type to Search"),
-                gettext("Type in the overview to search. Launch apps, find things."),
+                gettext("Type in the menu to search for apps, settings and more."),
             )
             .widget
             .upcast::<gtk::Widget>(),
@@ -68,8 +68,8 @@ impl Window {
         self.paginator.borrow_mut().add_page(
             ImagePageWidget::new(
                 "/org/gnome/Tour/workspaces.svg",
-                gettext("Keep on Top with Workspaces"),
-                gettext("Easily organize windows with the workspaces view."),
+                gettext("Get New Apps"),
+                gettext("With 'Software' you can find and install new apps."),
             )
             .widget
             .upcast::<gtk::Widget>(),
@@ -78,18 +78,8 @@ impl Window {
         self.paginator.borrow_mut().add_page(
             ImagePageWidget::new(
                 "/org/gnome/Tour/blank.svg",
-                gettext("Up/Down for the Overview"),
-                gettext("On a touchpad, use three-finger vertical swipes. Try it!"),
-            )
-            .widget
-            .upcast::<gtk::Widget>(),
-        );
-
-        self.paginator.borrow_mut().add_page(
-            ImagePageWidget::new(
-                "/org/gnome/Tour/blank.svg",
-                gettext("Left/Right for Workspaces"),
-                gettext("On a touchpad, use three-finger horizontal swipes. Try it!"),
+                gettext("Customize Your Desktop"),
+                gettext("You can use 'Settings Manager' to tweak options such as appearance."),
             )
             .widget
             .upcast::<gtk::Widget>(),
@@ -99,8 +89,8 @@ impl Window {
         let version = glib::get_os_info("VERSION").unwrap_or_else(|| "".into());
         let last_page = ImagePageWidget::new(
             "/org/gnome/Tour/ready-to-go.svg",
-            gettext("That's it. Have a nice day!"),
-            gettext("To get more advice and tips, see the Help app."),
+            gettext("That's it. You're ready!"),
+            gettext("We hope your experience with MassOS will be an exceptional one!"),
         );
         last_page.widget.get_style_context().add_class("last-page");
         self.paginator

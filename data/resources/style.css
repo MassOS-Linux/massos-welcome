@@ -42,7 +42,7 @@ window .titlebar button {
     to { background-position: 60% 30%, center 30%, center; }
 }
 
-.page { color: #000; }
+.page { color: white; }
 
   /* .page:nth-child(2) { background: linear-gradient(to right, #3584e4, #1a5fb4); }  overview */
   .page:nth-child(3) {  }  /* customize */

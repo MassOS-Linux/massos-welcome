@@ -148,7 +148,7 @@ impl WelcomePageWidget {
             );
         };
 
-        let title = gtk::Label::new(Some(&gettext("Start the Tour")));
+        let title = gtk::Label::new(Some(&gettext("Welcome to MassOS!")));
         title.set_margin_top(36);
         title.get_style_context().add_class("page-title");
         title.show();
@@ -158,7 +158,7 @@ impl WelcomePageWidget {
         let version = glib::get_os_info("VERSION").unwrap_or_else(|| "".into());
         // Translators: The following string is formated as "Learn about new and essential features in GNOME 3.36" for example
         let text = gtk::Label::new(Some(&i18n_f(
-            "Learn about the key features in {} {}.",
+            "This tutorial will show you the key features in {} {}.",
             &[&name, &version],
         )));
         text.get_style_context().add_class("body");

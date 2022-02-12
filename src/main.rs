@@ -16,8 +16,8 @@ fn main() {
     bindtextdomain(GETTEXT_PACKAGE, LOCALEDIR);
     textdomain(GETTEXT_PACKAGE);
 
-    glib::set_application_name(&gettext("Tour"));
-    glib::set_prgname(Some("Tour"));
+    glib::set_application_name(&gettext("Welcome To MassOS"));
+    glib::set_prgname(Some("Welcome To MassOS"));
 
     gtk::init().expect("Unable to start GTK3");
     #[cfg(feature = "video")]

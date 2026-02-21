@@ -59,7 +59,7 @@ impl Window {
             ImagePageWidget::new(
                 "/org/gnome/Tour/search.svg",
                 gettext("Just Type to Search"),
-                gettext("Type in the menu to search for apps, settings and more."),
+                gettext("Type in the menu to search for apps and settings. You can also press Alt+F2."),
             )
             .widget
             .upcast::<gtk::Widget>(),
@@ -69,7 +69,7 @@ impl Window {
             ImagePageWidget::new(
                 "/org/gnome/Tour/workspaces.svg",
                 gettext("Get New Apps"),
-                gettext("With 'Software' you can find and install new apps."),
+                gettext("Use 'Software' to find and install new apps from Flathub."),
             )
             .widget
             .upcast::<gtk::Widget>(),

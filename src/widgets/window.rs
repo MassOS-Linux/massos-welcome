@@ -49,7 +49,7 @@ impl Window {
             ImagePageWidget::new(
                 "/org/gnome/Tour/overview.svg",
                 gettext("See Your Apps"),
-                gettext("Your apps are neatly categorised. You can also search for apps."),
+                gettext("Your apps are neatly categorized. You can also search for apps."),
             )
             .widget
             .upcast::<gtk::Widget>(),
